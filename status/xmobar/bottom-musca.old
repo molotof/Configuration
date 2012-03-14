@@ -1,0 +1,14 @@
+Config
+  {
+    font         = "-*-gohufont-medium-r-*-*-12-*-*-*-*-*-iso10646-1"
+  , bgColor      = "#000"
+  , fgColor      = "#AAE"
+  , position     = BottomW C 100
+  , lowerOnStart = False
+  , commands     = [
+                     Run Com     "southerncross-xmobar windows" [] "wlist" 10
+                   ]
+  , sepChar     = "%"
+  , alignSep    = "}{"
+  , template    = "%wlist%"
+  }

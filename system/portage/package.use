@@ -1,0 +1,35 @@
+ys-fs/ntfs3g ntfsprogs
+app-editors/gvim perl python ruby cscope
+app-editors/vim perl python ruby cscope
+app-i18n/fbterm caps
+app-office/libreoffice nsplugin pdfimport -webdav -opengl
+app-portage/eix optimization
+app-portage/layman git cvs subversion
+dev-db/sqlite secure-delete unlock-notify
+dev-lang/python sqlite
+dev-libs/boost python
+dev-python/bpython urwid
+dev-vcs/git -gtk
+games-board/dreamchess music sound
+media-gfx/gimp smp curl python
+media-gfx/xsane gimp ocr
+media-libs/freetype -bindist
+media-libs/libcanberra -sound
+media-sound/audacity id3tag
+media-sound/lmms vst fluidsynth
+media-sound/mpd cdio cue inotify lame lastfmradio sqlite zip
+media-sound/ncmpcpp clock curl taglib visualizer
+media-sound/picard coverart
+media-video/avidemux -qt4
+media-video/mplayer2 bs2b cddb dvb pvr radio symlink ftp
+net-wireless/wpa_supplicant -qt4
+sys-apps/smartmontools caps minimal
+sys-kernel/pf-sources symlink
+sys-libs/tdb python
+www-client/elinks ftp javascript
+www-client/firefox pgo system-sqlite
+x11-base/xorg-server xvfb
+x11-libs/qt-gui gtkstyle
+x11-misc/dmenu xft
+x11-misc/dzen xpm
+x11-terms/rxvt-unicode 256-color blink iso14755 xft buffer-on-clear wcwidth pixbuf unicode3 -vanilla

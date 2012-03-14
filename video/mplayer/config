@@ -1,0 +1,28 @@
+vo = xv
+ao = alsa
+af = "volnorm,extrastereo"
+vf = "pp=de"
+softvol = yes
+
+double = yes
+framedrop = yes
+cache = 2048
+lavdopts = threads=2
+autoq = 100
+
+fs = yes
+slang = eng
+alang = eng
+sid = 0
+font = "DejaVu Sans Mono-24"
+subfont-text-scale = 2.5
+sub-fuzziness = 1
+ass = yes
+ass-use-margins = yes
+ass-force-style = "FontName=DejaVu Sans Mono,FontSize=24,Outline=1,Shadow=1"
+subcc = 1
+heartbeat-cmd = "xset dpms force on"
+msgcolor = yes
+
+quiet = yes
+

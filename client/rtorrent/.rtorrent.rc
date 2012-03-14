@@ -1,0 +1,43 @@
+bind = 0.0.0.0
+port_range = 60000-60999
+port_random = yes
+check_hash = yes
+directory = /home/demonpit/Downloads/Incomplete
+session = /home/wintervenom/.local/share/rtorrent/session
+encryption = allow_incoming,try_outgoing,enable_retry
+peer_exchange = yes
+dht = auto
+dht_port = 60881
+use_udp_trackers = no
+
+ratio.enable = yes
+ratio.min.set=100
+ratio.upload.set=20M
+ratio.max.set=300
+
+min_peers = 5
+max_peers = 126
+min_peers_seed = 1
+max_peers_seed = 126
+max_uploads = 5
+
+schedule = watch_directory_1,0,10,"load_start_verbose = /home/wintervenom/Downloads/*.torrent"
+schedule = watch_directory_2,0,10,"load_start_verbose = /home/demonpit/Downloads/*.torrent"
+schedule = low_disk_space,0,60,"close_low_diskspace = 200M"
+
+system.file_allocate.set = yes
+system.method.set_key = event.download.finished,move_complete,"execute = mv,-n,$d.get_base_path=,/home/demonpit/Downloads/;d.set_directory=/home/demonpit/Downloads/"
+system.method.set = group.seeding.ratio.command, d.close=, d.erase=
+
+
+#########################
+### RTorrent Extended ###
+#########################
+ip_filter=/home/wintervenom/.local/share/rtorrent/ipfilter/level1,/home/wintervenom/.local/share/rtorrent/ipfilter/bogon,/home/wintervenom/.local/share/rtorrent/ipfilter/dshield,/home/wintervenom/.local/share/rtorrent/ipfilter/templist
+schedule = filter,0,24:00:00,reload_ip_filter=
+
+schedule = snub_leechers,120,120,"snub_leechers=10,5,2M"
+schedule = ban_slow_peers,120,120,"ban_slow_peers=5,2K,64K,5,128K,10,1M,30"
+on_finished = unban,"d.unban_peers="
+on_finished = unsnub,"d.unsnub_peers="
+

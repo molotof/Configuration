@@ -1,0 +1,54 @@
+# Equalizer
+ctl.equal {
+    type equal
+}
+
+pcm.equal {
+    type plug
+    slave.pcm {
+        type equal
+        slave.pcm "plug:dmix"
+    }
+    hint.show on
+    hint.description "Equalizer"
+}
+
+# Bauer stereophonic-to-binaural
+pcm.bs2b {
+    type ladspa
+    path "/usr/lib/ladspa"
+    slave.pcm "plug:dmix"
+    plugins [
+        {
+            id 4221
+            input {
+                controls [ 700 6 ]
+            }
+        }
+    ]
+}
+
+# Swap stereo
+pcm.swapped {
+    type route
+    slave.pcm "plug:dmix"
+    ttable.0.1 1
+    ttable.1.0 1
+    hint.show on
+    hint.description "Swap Stereo"
+}
+
+# Headphones
+pcm.headphones {
+    type rate
+    slave.pcm "plug:bs2b"
+    slave.rate 48000
+    hint.show on
+    hint.description "Headphones"
+}
+
+#pcm.!default {
+#    type rate
+#    slave.pcm "plug:bs2b"
+#    slave.rate 48000
+#}

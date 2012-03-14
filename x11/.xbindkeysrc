@@ -1,0 +1,186 @@
+##################
+### Multimedia ###
+##################
+"mpc toggle"
+    XF86AudioPlay
+
+"urxvt -e ncmpcpp"
+    Shift + XF86AudioPlay
+
+"mpc stop"
+    XF86AudioStop
+
+"mpc prev"
+    XF86AudioPrev
+
+"mpc next"
+    XF86AudioNext
+
+"mpc seek -00:00:10"
+    Shift + XF86AudioPrev
+
+"mpc seek +00:00:10"
+    Shift + XF86AudioNext
+
+"mpc-trash"
+    Mod4 + Delete
+
+"mpc-addto Favorites"
+    Mod4 + Insert
+
+"ssh iandrio mpc toggle"
+    Mod1 + XF86AudioPlay
+
+"urxvt -e ssh -tC iandrio ncmpcpp"
+    Shift+Mod1 + XF86AudioPlay
+
+"ssh iandrio mpc stop"
+    Mod1 + XF86AudioStop
+
+"ssh iandrio mpc prev"
+    Mod1 + XF86AudioPrev
+
+"ssh iandrio mpc next"
+    Mod1 + XF86AudioNext
+
+"ssh iandrio mpc seek -00:00:10"
+    Shift+Mod1 + XF86AudioPrev
+
+"ssh iandrio mpc seek +00:00:10"
+    Shift+Mod1 + XF86AudioNext
+
+"ssh iandrio ~/bin/mpc-trash"
+    Mod1+Mod4 + Delete
+
+"ssh iandrio ~/bin/mpc-addto Favorites"
+    Mod1+Mod4 + Insert
+
+####################################
+### Multimedia, Alternative Keys ###
+####################################
+"urxvt -e ncmpcpp"
+    Shift+Mod4 + Up
+
+"dmpc"
+    Mod4 + Up
+
+"mpc stop"
+    Shift+Mod4 + Down
+
+"mpc toggle"
+    Mod4 + Down
+
+"mpc prev"
+    Mod4 + Left
+
+"mpc next"
+    Mod4 + Right
+
+"mpc seek -00:00:05"
+    Shift+Mod4 + Left
+
+"mpc seek +00:00:05"
+    Shift+Mod4 + Right
+
+"urxvt -e ssh -tC iandrio ncmpcpp"
+    Shift+Mod1+Mod4 + Up
+
+"ssh iandrio mpc stop"
+    Shift+Mod1+Mod4 + Down
+
+"ssh iandrio mpc toggle"
+    Mod1+Mod4 + Down
+
+"ssh iandrio mpc prev"
+    Mod1+Mod4 + Left
+
+"ssh iandrio mpc next"
+    Mod1+Mod4 + Right
+
+"ssh iandrio mpc seek -00:00:05"
+    Shift+Mod1+Mod4 + Left
+
+"ssh iandrio mpc seek +00:00:05"
+    Shift+Mod1+Mod4 + Right
+
+######################
+### Volume Control ###
+######################
+"volume mute"
+    XF86AudioMute
+
+"volume down"
+    XF86AudioLowerVolume
+
+"volume up"
+    XF86AudioRaiseVolume
+
+########################################
+### Volume Control, Alternative Keys ###
+########################################
+"volume mute"
+    Mod4 + Escape
+
+"volume down"
+    Mod4 + Control + Down
+
+"volume up"
+    Mod4 + Control + Up
+
+###########################################
+### Application Launchers, Special Keys ###
+###########################################
+"gcalctool"
+    XF86Calculator
+
+#############################
+### Application Launchers ###
+#############################
+"dmenu-launch"
+    Mod4 + o
+
+"urxvt"
+    Mod4 + apostrophe
+
+"urxvt -e htop"
+    Mod4 + x
+
+"urxvt -e dash -c 'PYTHONOPTIMIZE=1 ranger'"
+    Mod4+Shift + apostrophe
+
+"urxvt -e dash -c 'PYTHONOPTIMIZE=1 ranger'"
+    Shift + XF86Explorer
+
+"screenshot"
+    Print
+
+"screenshot-upload"
+    Mod4 + Print
+
+#"camera-snapshot"
+#    Shift + Print
+
+"i3lock"
+    Mod4 + F1
+
+"eject"
+    XF86Eject
+
+"bash -c 'xsel -o | xclip -b'"
+    Control+Shift + c
+
+########################
+### Power Management ###
+########################
+"bash -c 'sleep 1; xset dpms force off'"
+    Mod4 + F2
+
+"sync"
+    Mod4 + F4
+
+"xbacklight -steps 1 -set 0"
+    Mod4 + F6
+
+"xbacklight -steps 1 -set 100"
+    Mod4 + F7
+

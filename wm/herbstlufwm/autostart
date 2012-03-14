@@ -1,0 +1,139 @@
+#!/bin/bash
+colors=($(awk '/^\*color/{print $2}' .Xdefaults))
+
+hc () {
+    herbstclient "$@"
+}
+
+
+
+#######################
+### General Options ###
+#######################
+
+hc set default_frame_layout 0
+
+hc set frame_bg_transparent 1
+hc set frame_bg_normal_color "${colors[0]}"
+hc set frame_bg_active_color "${colors[8]}"
+
+hc set frame_border_width 2
+hc set frame_border_normal_color "${colors[1]}"
+hc set frame_border_active_color "${colors[10]}"
+
+hc set window_border_width 2
+hc set window_gap 0
+hc set window_border_normal_color "${colors[2]}"
+hc set window_border_active_color "${colors[15]}"
+
+hc set gapless_grid 1
+hc set always_show_frame 1
+
+hc set focus_follows_shift 1
+hc set focus_follows_mouse 1
+hc set raise_on_focus 0
+hc set raise_on_click 1
+
+hc set snap_distance 4
+hc set snap_gap 0
+
+#hc pad 0 0 0 14 0
+hc pad 0 0 0 0 0
+
+
+###################
+### Keybindings ###
+###################
+
+# Modifier variables
+s=Shift
+c=Control
+m=Mod4
+a=Mod1
+
+# Tags
+hc rename default "1"
+for ((t=1; t<=10; t++)); do
+    k=$((t % 10))
+    hc add "$t"
+    hc keybind "$m-$k" use "$t"
+    hc keybind "$m-$s-$k" move "$t"
+done
+hc floating 9 on
+
+# Layout control
+hc keybind $m-r remove
+hc keybind $m-space cycle_layout 1
+hc keybind $m-comma split vertical 0.5
+hc keybind $m-period split horizontal 0.5
+hc keybind $m-f floating toggle
+hc keybind $m-m fullscreen toggle
+hc keybind $m-t pseudotile toggle
+
+# Layout manager
+hc keybind $m-l spawn hlwm-layout-manager load
+hc keybind $m-$s-l spawn hlwm-layout-manager
+
+# Mouse control
+hc mousebind $m-Button1 move
+hc mousebind $m-Button2 resize
+hc mousebind $m-Button3 zoom
+
+# Focus window
+hc keybind $m-n focus left
+hc keybind $m-e focus down
+hc keybind $m-u focus up
+hc keybind $m-i focus right
+
+# Cycle focus
+hc keybind $m-BackSpace cycle_monitor
+hc keybind $m-k cycle_all +1
+hc keybind $m-$s-k cycle_all -1
+hc keybind $m-h cycle
+
+# Move window
+hc keybind $m-$s-n shift left
+hc keybind $m-$s-e shift down
+hc keybind $m-$s-u shift up
+hc keybind $m-$s-i shift right
+
+# Resize window
+step=0.05
+hc keybind $m-$c-n resize left +$step
+hc keybind $m-$c-e resize down +$step
+hc keybind $m-$c-u resize up +$step
+hc keybind $m-$c-i resize right +$step
+
+# Close window
+hc keybind $m-c close
+
+# Quit/Reload
+hc keybind $m-q reload
+hc keybind $m-$s-q quit
+
+
+
+####################
+### Window Rules ###
+####################
+hc unrule -F
+hc rule focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
+hc rule windowtype~'_NET_WM_STATE_FULLSCREEN' fullscreen=on
+hc rule class~'(Plugin-container|MPlayer)' fullscreen=on
+hc rule class='Wine' tag=9 pseudotile=on
+hc rule class='Gimp' tag=10
+hc rule class='Mirage' tag=10
+hc rule class~'(Xsane|Xephyr|Desura|Mupen64plus)' pseudotile=on
+hc rule instance='VCLSalFrame' pseudotile=on
+
+
+
+#################
+### Autostart ###
+#################
+feh --bg-fill ~/.background
+xrefresh
+hlwm-xmobar
+#killall -w dunst &> /dev/null

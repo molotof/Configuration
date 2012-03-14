@@ -1,0 +1,48 @@
+general {
+  output_format = "none"
+  colors = false
+  interval = 1
+}
+
+order = "load"
+order += "battery 0"
+#order += "disk /"
+#order += "disk /home"
+order += "wireless wlan0"
+order += "ethernet eth0"
+order += "run_watch DHCP"
+order += "time"
+
+time {
+  format = "%a %d%m:%H%M.%S"
+}
+
+load {
+  format = "LOAD: %5min"
+}
+
+battery 0 {
+  format = "%status: %percentage"
+}
+
+disk "/" {
+  format = "ROOT: %free"
+}
+
+disk "/home" {
+  format = "HOME: %free"
+}
+
+wireless wlan0 {
+  format_up = "WLAN: %ip ('%essid', %quality)"
+  format_down = "WLAN: down"
+}
+
+ethernet eth0 {
+  format_up = "ETHR: %ip"
+  format_down = "ETHR: down"
+}
+
+run_watch DHCP {
+  pidfile = "/var/run/dhcpcd-*.pid"
+}

@@ -1,0 +1,10 @@
+set browser uri-open %s
+set adjust_open width
+set smooth_scrolling true
+set transparency true
+set recolor true
+map <PageUp> navigate previous
+map <PageDown> navigate next
+map + zoom in
+map - zoom out
+map <Home> scroll

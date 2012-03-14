@@ -1,0 +1,57 @@
+Config
+  {
+    font         = "--*-gohufont-medium-r-*-*-12-*-*-*-*-*-iso10646-1"
+  , bgColor      = "black"
+  , fgColor      = "white"
+  , position     = TopW C 100
+  , lowerOnStart = False
+  , commands     = [
+                     Run Cpu     [
+                                   "-t", "CPU: <total>"
+                                 , "-L", "10"
+                                 , "-H", "50"
+                                 , "-l", "green"
+                                 , "-n", "orange"
+                                 , "-h", "red"
+                                 , "-w", "4"
+                                 ] 20
+                   , Run Memory  [
+                                   "-t", "MEM: <used>"
+                                 , "-L", "500"
+                                 , "-H", "1000"
+                                 , "-l", "green"
+                                 , "-n", "orange"
+                                 , "-h", "red"
+                                 , "-w", "4"
+                                 ] 50
+                   , Run DiskU   [
+                                   ("/", "ROOT: <free> <fc=#333>|</fc>")
+                                 , ("/home", "HOME: <free>")
+                                 ]
+                                 [
+                                   "-L", "5"
+                                 , "-H", "10"
+                                 , "-l", "red"
+                                 , "-n", "orange"
+                                 , "-h", "green"
+                                 , "-w", "4"
+                                 ] 100
+                   , Run Battery [
+                                   "-t", "BAT: <left>"
+                                 , "-L", "10"
+                                 , "-H", "70"
+                                 , "-l", "red"
+                                 , "-n", "orange"
+                                 , "-h", "green"
+                                 , "-w", "4"
+                                 ] 300
+                   , Run Date    "%a %m%d:%H%M.%S"
+                                 "date"
+                                 10
+                   , Run Com     "xmobar-np-mpd" [] "mpd" 10
+                   , Run Com     "xmobar-wireless-info" [] "wlan" 20
+                   ]
+  , sepChar     = "%"
+  , alignSep    = "}{"
+  , template    = "%mpd%}{%cpu% <fc=#333>|</fc> %memory% <fc=#333>|</fc> %battery% <fc=#333>|</fc> %disku% <fc=#333>|</fc> WLAN: %wlan% <fc=#333>|</fc> %date%"
+  }
