@@ -33,3 +33,4 @@ x11-libs/qt-gui gtkstyle
 x11-misc/dmenu xft
 x11-misc/dzen xpm
 x11-terms/rxvt-unicode 256-color blink iso14755 xft buffer-on-clear wcwidth pixbuf unicode3 -vanilla
+media-plugins/gst-plugins-meta dvb libvisual taglib
