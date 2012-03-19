@@ -293,15 +293,19 @@ c () {
         fi
         for dir in "${@}"; do
             if [[ -d "${dir}" ]]; then
-                command cd ${dir}
+                command cd "${dir}"
             else
-                command cd ${dir}*
+                command cd *"${dir}"*
             fi
         done
     else
         command cd ~
     fi
     ${ls}
+}
+project () {
+    # Laziness.
+    c ~ Projects "$@"
 }
 hide () {
     if [[ -z "${1}" ]]; then

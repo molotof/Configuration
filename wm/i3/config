@@ -140,19 +140,19 @@ exec i3-scheme
 # Colors
 # Item                  Border  Backgnd Foregnd
 # ---------------------------------------------
-client.focused_inactive #423E2F #423E2F #6D6874
-client.focused          #3E2D2B #3E2D2B #5E6550
-client.unfocused        #2E3C2D #2E3C2D #9B8E85
+client.focused_inactive #831008 #831008 #A77D76
+client.focused          #462415 #462415 #997F60
+client.unfocused        #6A100D #6A100D #F4E3CA
 
 bar {
   status_command i3status -c
   colors {
     background #000000
-    statusline #726954
-    focused_workspace #5E6550 #3E2D2B
-    active_workspace #6D6874 #423E2F
-    inactive_workspace #9B8E85 #2E3C2D
-    urgent_workspace #8C737C #343245
+    statusline #AB835E
+    focused_workspace #997F60 #462415
+    active_workspace #A77D76 #831008
+    inactive_workspace #F4E3CA #6A100D
+    urgent_workspace #C48180 #431C2D
   }
 }
 # Scheme Generator: End

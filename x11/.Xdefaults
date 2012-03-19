@@ -1,3 +1,11 @@
+Xft.antialias:          1
+Xft.autohint:           0
+Xft.dpi:                96
+Xft.hinting:            1
+Xft.hintstyle:          hintfull
+Xft.lcdfilter:          lcddefault
+Xft.rgba:               rgb
+
 Xcursor.theme:          neutral
 
 XTerm*metaSendsEscape:  true
@@ -39,21 +47,21 @@ URxvt*keysym.End:       \033[4~
 
 ! Scheme Generator: Start
 *background: #000000
-*foreground: #4F4744
-*color0: #2D282C
-*color1: #3E2D2B
-*color2: #2E3C2D
-*color3: #423E2F
-*color4: #343245
-*color5: #4C3942
-*color6: #3F4744
-*color7: #534D4D
-*color8: #544F4C
-*color9: #624D53
-*color10: #5E6550
-*color11: #726954
-*color12: #6D6874
-*color13: #8C737C
-*color14: #7E857C
-*color15: #9B8E85
+*foreground: #7F544B
+*color0: #2B1D1D
+*color1: #462415
+*color2: #6A100D
+*color3: #831008
+*color4: #431C2D
+*color5: #5D2634
+*color6: #604744
+*color7: #68494B
+*color8: #775357
+*color9: #9D6856
+*color10: #997F60
+*color11: #AB835E
+*color12: #A77D76
+*color13: #C48180
+*color14: #C4B994
+*color15: #F4E3CA
 ! Scheme Generator: End

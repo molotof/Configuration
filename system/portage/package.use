@@ -26,7 +26,7 @@ net-wireless/wpa_supplicant -qt4
 sys-apps/smartmontools caps minimal
 sys-kernel/pf-sources symlink
 sys-libs/tdb python
-www-client/elinks ftp javascript
+www-client/elinks ftp
 www-client/firefox pgo system-sqlite
 x11-base/xorg-server xvfb
 x11-libs/qt-gui gtkstyle
