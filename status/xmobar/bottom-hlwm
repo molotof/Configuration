@@ -37,9 +37,8 @@ Config
                                  "date"
                                  10
                    , Run StdinReader
-                   , Run Com     "xmobar-wireless-info" [] "wlan" 50
                    ]
   , sepChar     = "%"
   , alignSep    = "}{"
-  , template    = "%StdinReader%}{%cpu%   %memory%   %battery%   NET: %wlan%   %date% "
+  , template    = "%StdinReader%}{%cpu%   %memory%   %battery%   %date% "
   }
