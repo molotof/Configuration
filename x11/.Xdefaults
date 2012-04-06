@@ -17,7 +17,7 @@ XTerm*utf8:             1
 
 URxvt.transparent:      true
 URxvt*tintColor:        white
-URxvt*shading:          9
+URxvt*shading:          10
 URxvt*scrollBar:        false
 URxvt*saveLines:        1000
 URxvt*font:             xft: Lucida Console-8
@@ -47,21 +47,21 @@ URxvt*keysym.End:       \033[4~
 
 ! Scheme Generator: Start
 *background: #000000
-*foreground: #A0968A
-*color0: #1A2A39
-*color1: #3F2530
-*color2: #0A4B4C
-*color3: #434230
-*color4: #163A56
-*color5: #1E4166
-*color6: #4A4043
-*color7: #38545F
-*color8: #86353E
-*color9: #4C6676
-*color10: #34868E
-*color11: #8A785E
-*color12: #956A74
-*color13: #A0868D
-*color14: #A7ADA1
-*color15: #7FBBD3
+*foreground: #F6AD2A
+*color0: #7F2F00
+*color1: #8E3C00
+*color2: #415140
+*color3: #B65200
+*color4: #975710
+*color5: #C44A10
+*color6: #BA5F10
+*color7: #DF7610
+*color8: #DC7608
+*color9: #FF9F15
+*color10: #FFCF42
+*color11: #FFDC56
+*color12: #FFE296
+*color13: #FFF5CE
+*color14: #FFFFCE
+*color15: #FFFFE4
 ! Scheme Generator: End

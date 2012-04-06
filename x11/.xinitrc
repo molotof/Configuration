@@ -1,6 +1,6 @@
 #!/bin/bash
-#export WINDOW_MANAGER='herbstluftwm'
-export WINDOW_MANAGER='i3'
+export WINDOW_MANAGER='herbstluftwm'
+#export WINDOW_MANAGER='i3'
 export BROWSER='open'
 
 xrandr --output LVDS --set "scaling mode" Full

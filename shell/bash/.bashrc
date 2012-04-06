@@ -40,6 +40,7 @@ export WWW_HOME='http://www.google.com'
 
 export GTK2_RC_FILES="${HOME}/.gtkrc-2.0"
 export DMENU_OPTIONS='-nb white -nf black -sb #AAAAAA -sf white'
+export WINEARCH='win32'
 export WINEDEBUG='-all'
 
 

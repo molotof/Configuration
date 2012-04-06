@@ -6,7 +6,6 @@ hc () {
 }
 
 
-
 #######################
 ### General Options ###
 #######################
@@ -63,7 +62,7 @@ hc floating 9 on
 
 # Layout control
 hc keybind $m-r remove
-hc keybind $m-space cycle_layout 1
+hc keybind $m-slash cycle_layout 1
 hc keybind $m-comma split vertical 0.5
 hc keybind $m-period split horizontal 0.5
 hc keybind $m-f floating toggle
@@ -87,9 +86,9 @@ hc keybind $m-i focus right
 
 # Cycle focus
 hc keybind $m-BackSpace cycle_monitor
-hc keybind $m-k cycle_all +1
-hc keybind $m-$s-k cycle_all -1
-hc keybind $m-h cycle
+hc keybind $m-space cycle_all +1
+hc keybind $m-$s-space cycle_all -1
+hc keybind $m-k cycle
 
 # Move window
 hc keybind $m-$s-n shift left
@@ -98,7 +97,7 @@ hc keybind $m-$s-u shift up
 hc keybind $m-$s-i shift right
 
 # Resize window
-step=0.05
+step=0.02
 hc keybind $m-$c-n resize left +$step
 hc keybind $m-$c-e resize down +$step
 hc keybind $m-$c-u resize up +$step
@@ -123,11 +122,15 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule windowtype~'_NET_WM_STATE_FULLSCREEN' fullscreen=on
 hc rule class~'(Plugin-container|MPlayer)' fullscreen=on
 hc rule class='Wine' tag=9 pseudotile=on
-hc rule class='Gimp' tag=10
 hc rule class='Mirage' tag=10
 hc rule class~'(Xsane|Xephyr|Desura|Mupen64plus)' pseudotile=on
 hc rule instance='VCLSalFrame' pseudotile=on
-
+# GIMP
+hc rule class='Gimp' tag=10 index=11 pseudotile=on
+hc rule class='Gimp' windowrole~'gimp-(image-window|toolbox|dock)' \
+    pseudotile=off
+hc rule class='Gimp' windowrole='gimp-toolbox' focus=off index=00
+hc rule class='Gimp' windowrole='gimp-dock' focus=off index=00
 
 
 #################
