@@ -86,9 +86,9 @@ hc keybind $m-i focus right
 
 # Cycle focus
 hc keybind $m-BackSpace cycle_monitor
-hc keybind $m-space cycle_all +1
-hc keybind $m-$s-space cycle_all -1
-hc keybind $m-k cycle
+hc keybind $m-k cycle_all +1
+hc keybind $m-$s-k cycle_all -1
+hc keybind $m-space cycle
 
 # Move window
 hc keybind $m-$s-n shift left

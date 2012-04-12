@@ -1,6 +1,6 @@
 vo = xv
 ao = alsa
-af = "volnorm,extrastereo"
+af = "volnorm"
 vf = "pp=de"
 softvol = yes
 

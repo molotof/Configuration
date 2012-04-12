@@ -91,6 +91,7 @@ alias py='python'
 alias ip2='ipython2'
 alias ip3='ipython'
 alias hc='herbstclient'
+alias np2='relevant-track-np'
 ### Network ###
 alias incubine='ssh incubine'
 alias succubine='ssh succubine'
