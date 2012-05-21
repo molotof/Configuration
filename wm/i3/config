@@ -125,7 +125,7 @@ for_window [class="Xsane"] floating enable; border 1pixel
 for_window [class="Xephyr"] floating enable; border 1pixel
 for_window [class="pesterchum.py"] floating enable; border 1pixel
 for_window [class="Dosbox"] floating enable; border 1pixel
-#for_window [class="Gimp"] floating enable
+for_window [class="Gimp"] floating enable
 for_window [class="openarena"] floating enable
 for_window [class="mupen64plus"] floating enable;
 for_window [class="sunvox"] floating enable; border 1pixel
@@ -140,19 +140,19 @@ exec i3-scheme
 # Colors
 # Item                  Border  Backgnd Foregnd
 # ---------------------------------------------
-client.focused_inactive #B65200 #B65200 #FFE296
-client.focused          #8E3C00 #8E3C00 #FFCF42
-client.unfocused        #415140 #415140 #FFFFE4
+client.focused_inactive #4A6137 #4A6137 #C1A882
+client.focused          #5C3911 #5C3911 #83A386
+client.unfocused        #2C5937 #2C5937 #FFFFE8
 
 bar {
   status_command i3status -c
   colors {
     background #000000
-    statusline #FFDC56
-    focused_workspace #FFCF42 #8E3C00
-    active_workspace #FFE296 #B65200
-    inactive_workspace #FFFFE4 #415140
-    urgent_workspace #FFF5CE #975710
+    statusline #C3B777
+    focused_workspace #83A386 #5C3911
+    active_workspace #C1A882 #4A6137
+    inactive_workspace #FFFFE8 #2C5937
+    urgent_workspace #E9B77F #355F49
   }
 }
 # Scheme Generator: End

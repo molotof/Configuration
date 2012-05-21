@@ -1,37 +1,37 @@
-Xft.antialias:          1
-Xft.autohint:           0
-Xft.dpi:                96
-Xft.hinting:            1
-Xft.hintstyle:          hintfull
-Xft.lcdfilter:          lcddefault
-Xft.rgba:               rgb
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.rgba: rgb
 
-Xcursor.theme:          neutral
+Xcursor.theme: neutral
 
-XTerm*metaSendsEscape:  true
-XTerm*visualBell:       true
-XTerm*bellIsUrgent:     true
-XTerm*fastScroll:       true
-XTerm*multiScroll:      true
-XTerm*utf8:             1
+XTerm*metaSendsEscape: true
+XTerm*visualBell: true
+XTerm*bellIsUrgent: true
+XTerm*fastScroll: true
+XTerm*multiScroll: true
+XTerm*utf8: 1
 
-URxvt.transparent:      true
-URxvt*tintColor:        white
-URxvt*shading:          10
-URxvt*scrollBar:        false
-URxvt*saveLines:        1000
-URxvt*font:             xft: Lucida Console-8
-URxvt*boldFont:         xft: Lucida Console-8
-URxvt*perl-ext-common:  default,matcher
-URxvt*urlLauncher:      open
-URxvt*colorURL:         #86a2be
-URxvt*matcher.button:   1
-URxvt*visualBell:       true
-URxvt*urgentOnBell:     true
-URxvt*cursorBlink:      true
-URxvt*termName:         rxvt-256color
-URxvt*keysym.Home:      \033[1~
-URxvt*keysym.End:       \033[4~
+URxvt.transparent: true
+URxvt*tintColor: white
+URxvt*shading: 10
+URxvt*scrollBar: false
+URxvt*saveLines: 1000
+URxvt*font: xft: Dejavu Sans Mono-12
+URxvt*boldFont: xft: Dejavu Sans Mono-12
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: open
+URxvt*colorURL: #86a2be
+URxvt*matcher.button: 1
+URxvt*visualBell: true
+URxvt*urgentOnBell: true
+URxvt*cursorBlink: true
+URxvt*termName: rxvt-256color
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
 
 ! Terminal Colors
 ! ---------------
@@ -47,21 +47,21 @@ URxvt*keysym.End:       \033[4~
 
 ! Scheme Generator: Start
 *background: #000000
-*foreground: #F6AD2A
-*color0: #7F2F00
-*color1: #8E3C00
-*color2: #415140
-*color3: #B65200
-*color4: #975710
-*color5: #C44A10
-*color6: #BA5F10
-*color7: #DF7610
-*color8: #DC7608
-*color9: #FF9F15
-*color10: #FFCF42
-*color11: #FFDC56
-*color12: #FFE296
-*color13: #FFF5CE
-*color14: #FFFFCE
-*color15: #FFFFE4
+*foreground: #606D4F
+*color0: #202E17
+*color1: #5C3911
+*color2: #2C5937
+*color3: #4A6137
+*color4: #355F49
+*color5: #6F583A
+*color6: #3F6C5A
+*color7: #576D58
+*color8: #9C7437
+*color9: #A0906A
+*color10: #83A386
+*color11: #C3B777
+*color12: #C1A882
+*color13: #E9B77F
+*color14: #EDE1A0
+*color15: #FFFFE8
 ! Scheme Generator: End

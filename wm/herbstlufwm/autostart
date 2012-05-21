@@ -1,9 +1,8 @@
 #!/bin/bash
 colors=($(awk '/^\*color/{print $2}' .Xdefaults))
 
-hc () {
-    herbstclient "$@"
-}
+hc () { herbstclient "$@"; }
+hc emit_hook reload
 
 
 #######################
@@ -36,7 +35,7 @@ hc set raise_on_click 1
 hc set snap_distance 4
 hc set snap_gap 0
 
-hc pad 0 0 0 14 0
+hc pad 0 14 0 0 0
 #hc pad 0 0 0 0 0
 
 
@@ -104,7 +103,7 @@ hc keybind $m-$c-u resize up +$step
 hc keybind $m-$c-i resize right +$step
 
 # Close window
-hc keybind $m-c close
+hc keybind $m-c close_or_remove
 
 # Quit/Reload
 hc keybind $m-q reload
@@ -138,5 +137,6 @@ hc rule class='Gimp' windowrole='gimp-dock' focus=off index=00
 #################
 feh --bg-fill ~/.background
 xrefresh
-hlwm-xmobar
+killall hlwm-dzen2
+hlwm-dzen2
 #killall -w dunst &> /dev/null
