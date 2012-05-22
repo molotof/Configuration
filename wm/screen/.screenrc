@@ -1,0 +1,23 @@
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+
+altscreen on
+term screen-256color
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+termcapinfo xterm* ti@:te@
+
+hardstatus alwayslastline
+hardstatus string "screen (%n: %t)"
+caption string "%{= kw}%d-%m %c.%s %{= kw}%-w%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+w"
+caption always
+startup_message off
+attrcolor b ".I"
+
+#screen -t irc 1 weechat-curses
+screen 1 bash
+screen 2 bash
+screen 3 bash
+select 1
+
