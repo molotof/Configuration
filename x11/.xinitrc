@@ -3,8 +3,13 @@ export WINDOW_MANAGER='herbstluftwm'
 #export WINDOW_MANAGER='i3'
 export BROWSER='open'
 
-xrandr --output LVDS --set "scaling mode" Full
-xrandr --output LVDS1 --set "scaling mode" Full
+for m in LVDS{,1}; do
+    if [[ $HOSTNAME == 'iandrio' ]]; then
+        xrandr --output $m --off
+    else
+        xrandr --output $m --set "scaling mode" Full
+    fi
+done
 xsetroot -solid black
 feh --bg-fill ~/.background-busy
 xrefresh

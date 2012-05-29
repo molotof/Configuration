@@ -20,8 +20,8 @@ URxvt*tintColor: white
 URxvt*shading: 10
 URxvt*scrollBar: false
 URxvt*saveLines: 1000
-URxvt*font: xft: Dejavu Sans Mono-12
-URxvt*boldFont: xft: Dejavu Sans Mono-12
+URxvt*font: xft: Dejavu Sans Mono-8
+URxvt*boldFont: xft: Dejavu Sans Mono-8
 URxvt*perl-ext-common: default,matcher
 URxvt*urlLauncher: open
 URxvt*colorURL: #86a2be
@@ -47,21 +47,21 @@ URxvt*keysym.End: \033[4~
 
 ! Scheme Generator: Start
 *background: #000000
-*foreground: #606D4F
-*color0: #202E17
-*color1: #5C3911
-*color2: #2C5937
-*color3: #4A6137
-*color4: #355F49
-*color5: #6F583A
-*color6: #3F6C5A
-*color7: #576D58
-*color8: #9C7437
-*color9: #A0906A
-*color10: #83A386
-*color11: #C3B777
-*color12: #C1A882
-*color13: #E9B77F
-*color14: #EDE1A0
-*color15: #FFFFE8
+*foreground: #918474
+*color0: #211E4B
+*color1: #3D3657
+*color2: #544435
+*color3: #784F43
+*color4: #823E4F
+*color5: #6F4B67
+*color6: #875758
+*color7: #83666A
+*color8: #756D6A
+*color9: #8B7A78
+*color10: #A27A6D
+*color11: #CA9388
+*color12: #C0959F
+*color13: #D493A6
+*color14: #D0A39E
+*color15: #F0BFBB
 ! Scheme Generator: End
