@@ -1,9 +1,12 @@
 #!/bin/bash
+DISPLAY=${DISPLAY:-:0.0}
+res=$(xrandr -d $DISPLAY -q | awk -F'current' -F',' 'NR==1 {gsub("( |current)","");print $2}')
+res=${res:-1280x800}
 colors=($(awk '/^\*color/{print $2}' .Xdefaults))
 
 hc () { herbstclient "$@"; }
 hc emit_hook reload
-
+hc set_monitors $res+0+0
 
 #######################
 ### General Options ###

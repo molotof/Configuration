@@ -306,7 +306,7 @@ c () {
     fi
     ${ls}
 }
-project () {
+proj () {
     # Laziness.
     c ~ Projects "$@"
 }

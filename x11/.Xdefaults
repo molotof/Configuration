@@ -20,8 +20,8 @@ URxvt*tintColor: white
 URxvt*shading: 10
 URxvt*scrollBar: false
 URxvt*saveLines: 1000
-URxvt*font: xft: Dejavu Sans Mono-8
-URxvt*boldFont: xft: Dejavu Sans Mono-8
+URxvt*font: xft: Ubuntu Mono-8
+URxvt*boldFont: xft: Ubuntu Mono-8
 URxvt*perl-ext-common: default,matcher
 URxvt*urlLauncher: open
 URxvt*colorURL: #86a2be
