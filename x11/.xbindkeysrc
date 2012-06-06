@@ -169,6 +169,9 @@
 "bash -c 'xsel -o | xclip -b'"
     Control+Shift + c
 
+"toggle-trayer"
+    Mod4 + b
+
 ########################
 ### Power Management ###
 ########################
