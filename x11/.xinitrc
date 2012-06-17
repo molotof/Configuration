@@ -10,6 +10,13 @@ for m in LVDS{,1}; do
         xrandr --output $m --set "scaling mode" Full
     fi
 done
+if [[ $HOSTNAME == 'iandrio' ]]; then
+    xrandr --newmode '1280x1024i' 110.0 1280 1360 1472 1728 1024 1028 1036 \
+        1076 Interlace -Hsync -Vsync
+    xrandr --addmode VGA-0 1280x1024i
+    xrandr --output VGA-0 --mode 1024x768
+fi
+
 xsetroot -solid black
 feh --bg-fill ~/.background-busy
 xrefresh
@@ -25,8 +32,9 @@ xbindkeys
 #synclient VertTwoFingerScroll=1
 #synclient HorizTwoFingerScroll=1
 #synclient TrackstickSpeed=40
+redshift-wrapper &
 pidof mpd &> /dev/null || mpd ${HOME}/.config/mpd/mpd.conf
-pidof mpdscribble || mpdscribble
+#pidof mpdscribble || mpdscribble
 dunst -nb white -nf black &
 parcellite &
 
