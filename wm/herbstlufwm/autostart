@@ -39,7 +39,6 @@ hc set snap_distance 4
 hc set snap_gap 0
 
 hc pad 0 13 0 0 0
-#hc pad 0 0 0 0 0
 
 
 ###################
