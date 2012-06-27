@@ -1,7 +1,7 @@
 #
 mpd_host = "localhost"
 mpd_port = "6600"
-mpd_music_dir "~/Music/Library"
+mpd_music_dir = "/home/wintervenom/Music/Library"
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "5"
 mpd_communication_mode = "polling" #(polling/notifications)

@@ -1,5 +1,5 @@
 vo = xv
-ao = alsa
+ao = pulse
 af = "volnorm"
 vf = "pp=de"
 softvol = yes

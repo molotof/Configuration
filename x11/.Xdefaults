@@ -47,21 +47,21 @@ URxvt*keysym.End: \033[4~
 
 ! Scheme Generator: Start
 *background: #000000
-*foreground: #94BAA3
-*color0: #331C24
-*color1: #42311D
-*color2: #334124
-*color3: #504B1D
-*color4: #4D4C47
-*color5: #704045
-*color6: #5A6758
-*color7: #6D6558
-*color8: #A87C55
-*color9: #90AB5B
-*color10: #ABBA98
-*color11: #BCEA6E
-*color12: #BFCB87
-*color13: #B0EA9B
-*color14: #AAFDBA
-*color15: #C4FFCF
+*foreground: #EBFFF6
+*color0: #3D2012
+*color1: #46310B
+*color2: #565730
+*color3: #699A2E
+*color4: #635F66
+*color5: #A46432
+*color6: #907250
+*color7: #848067
+*color8: #A2DB8C
+*color9: #D1D07B
+*color10: #ACDAAE
+*color11: #B6FF92
+*color12: #EAC994
+*color13: #D2F0FD
+*color14: #C3FFFF
+*color15: #D6FFFF
 ! Scheme Generator: End

@@ -1,7 +1,7 @@
 #!/bin/bash
 export WINDOW_MANAGER='herbstluftwm'
-#export WINDOW_MANAGER='i3'
 export BROWSER='open'
+export GTK2_RC_FILES="${HOME}/.gtkrc-2.0"
 
 for m in LVDS{,1}; do
     if [[ $HOSTNAME == 'iandrio' ]]; then
@@ -16,10 +16,7 @@ if [[ $HOSTNAME == 'iandrio' ]]; then
     xrandr --addmode VGA-0 1280x1024i
     xrandr --output VGA-0 --mode 1024x768
 fi
-
 xsetroot -solid black
-feh --bg-fill ~/.background-busy
-xrefresh
 
 setxkbmap -layout 'us(colemak),us' -option 'compose:ralt' \
     -option 'grp:shift_caps_toggle' -option 'keypad:pointerkeys'
@@ -34,7 +31,6 @@ xbindkeys
 #synclient TrackstickSpeed=40
 redshift-wrapper &
 pidof mpd &> /dev/null || mpd ${HOME}/.config/mpd/mpd.conf
-#pidof mpdscribble || mpdscribble
 dunst -nb white -nf black &
 parcellite &
 
