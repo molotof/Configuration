@@ -1,0 +1,59 @@
+#!/bin/bash
+
+root="$HOME/repos"
+repo-Configuration () {
+    tree=(
+    ['audio/alsa']='.asoundrc'
+    ['audio/mpd']='.config/mpd/mpd.conf|(password +).*'
+    ['audio/mpd/ncmpcpp']='.ncmpcpp/{config,keys}'
+    ['file/ranger']='.config/ranger/{rc.conf,*.py}'
+    ['network/pentadactyl']='.pentadactylrc'
+    ['network/rtorrent']='.rtorrent.rc'
+    ['network/samba']='/etc/samba/smb.conf'
+    ['network/update-repos']='.config/update-repos/config'
+    ['shell/bash']='.bash{rc,_profile,_logout}'
+    ['status/i3status']='.config/i3status/config'
+    ['status/xmobar']='.config/xmobar/*'
+    ['system/pacman']='/etc/pacman.{conf,d/mirrorlist}'
+    ['text/vim']='.vimrc'
+    ['text/zathura']='.config/zathura/zathurarc'
+    ['video/mplayer']='.mplayer/*'
+    ['wm/herbstluftwm']='.config/herbstluftwm/{autostart,layouts}'
+    ['wm/i3']='.config/i3/config'
+    ['wm/screen']='.screenrc'
+    ['x11']='{.{xbindkeysrc,xinitrc,Xdefaults,fonts.conf},/etc/X11/xorg.conf}'
+    )
+}
+repo-Scripts () {
+    tree=(
+    ['audio']='bin/speak'
+    ['audio/alsa']='bin/volume'
+    ['audio/mpd']='bin/{dmpc,np}'
+    ['audio/mpd/mpc-utils']='bin/mpc-*'
+    ['audio/mpd/relevant-track']='bin/relevant-track{,-np,-weechat}'
+    ['file/archive']='bin/{archive,extract}'
+    ['file/backup']='bin/backup{,-system}'
+    ['file/cleanup']='bin/{sample-dups,superclean,sanitize}'
+    ['file/launch']='bin/{open,*-launch}'
+    ['file/organize']='bin/organize-by-*'
+    ['network/download']='bin/{dl,vkdl,ytdl{,-mplayer,-mp3},music-populate}'
+    ['network/updater']='bin/update-*'
+    ['network/util']='bin/{toggle-host*,restore-hosts.bat}'
+    ['status']='bin/{osd,battery-monitor}'
+    ['status/barstatus']='bin/barstatus{,-*}'
+    ['status/human-sysinfo']='bin/human-*info'
+    ['status/xmobar']='bin/xmobar-*'
+    ['term/colorscheme-generator']='bin/{bg-scheme,term-color-generator}'
+    ['term/test']='bin/color{block,code}s'
+    ['term/wrapper']='bin/fbterm-tint'
+    ['toys']='bin/{lottery,lucid,random-word,self-pong,tclock}'
+    ['toys/arch']='bin/arch{logo,-splash}'
+    ['toys/dangerous']='bin/schizo'
+    ['util/login']='bin/{login-action-menu,resume-screen,wm-session-manager}'
+    ['util/system']='bin/{rc,zimage-extract}'
+    ['video/ffmpeg']='bin/ffmpeg-*'
+    ['video/tv']='bin/tv{,-scan}'
+    ['wm/herbstluftwm']='bin/hlwm-*'
+    )
+}
+
