@@ -38,7 +38,7 @@ repo-Scripts () {
     ['file/organize']='bin/organize-by-*'
     ['network/download']='bin/{dl,vkdl,ytdl{,-mplayer,-mp3},music-populate}'
     ['network/updater']='bin/update-*'
-    ['network/util']='bin/{toggle-host*,restore-hosts.bat}'
+    ['network/util']='bin/{toggle-host*,restore-hosts.bat,azilink}'
     ['status']='bin/{osd,battery-monitor}'
     ['status/barstatus']='bin/barstatus{,-*}'
     ['status/human-sysinfo']='bin/human-*info'

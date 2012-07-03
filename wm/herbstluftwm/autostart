@@ -141,4 +141,5 @@ hc rule class='Gimp' windowrole='gimp-dock' focus=off index=00
 #################
 feh --bg-fill ~/.background
 xrefresh
+killall -w hlwm-dzen2
 hlwm-dzen2
