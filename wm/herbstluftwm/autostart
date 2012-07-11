@@ -3,6 +3,12 @@ DISPLAY=${DISPLAY:-:0.0}
 colors=($(awk '/^\*color/{print $2}' .Xdefaults))
 
 hc () { herbstclient "$@"; }
+launch () {
+    export TERM='dumb'
+    unset PS1
+    "$@" </dev/null &>/dev/null & disown
+}
+
 hc detect_monitors
 hc emit_hook reload
 
@@ -124,6 +130,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule windowtype~'_NET_WM_STATE_FULLSCREEN' fullscreen=on
 hc rule class~'(Plugin-container|MPlayer)' fullscreen=on
+hc rule class='Qjackctl' pseudotile=on
 hc rule class='Wine' tag=9 pseudotile=on
 hc rule class='Mirage' tag=10
 hc rule class~'(Xsane|Xephyr|Desura|Mupen64plus)' pseudotile=on
@@ -142,4 +149,5 @@ hc rule class='Gimp' windowrole='gimp-dock' focus=off index=00
 feh --bg-fill ~/.background
 xrefresh
 killall -w hlwm-dzen2
-hlwm-dzen2
+launch hlwm-dzen2
+pidof qjackctl >/dev/null || launch qjackctl

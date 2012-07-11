@@ -1,5 +1,5 @@
 vo = xv
-ao = pulse
+ao = jack
 af = "volnorm"
 vf = "pp=de"
 softvol = yes

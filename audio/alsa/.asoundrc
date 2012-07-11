@@ -1,0 +1,64 @@
+# Loopback out (capture device)
+pcm.loop_capture {
+    type plug
+    slave.pcm "hw:Loopback,0"
+    hint.description "Loopback Out"
+    hint.show on
+}
+
+# Loopback in (playback device)
+pcm.loop_playback {
+    type plug
+    slave.pcm "hw:Loopback,1"
+    hint.description "Loopback In"
+    hint.show on
+}
+
+# Loopback duplex
+pcm.loop {
+    type asym
+    playback.pcm "loop_playback"
+    capture.pcm "loop_capture"
+    hint.description "Loopback Duplex"
+    hint.show on
+}
+
+# ALSA-JACK bridge
+pcm.jack {
+    type jack
+    playback_ports.0 system:playback_1
+    playback_ports.1 system:playback_2
+    capture_ports.0 system:capture_1
+    capture_ports.1 system:capture_2
+}
+
+# Route audio to JACK by default
+pcm.!default {
+    type plug
+    slave.pcm "jack"
+    hint.description "ALSA-JACK Bridge"
+    hint.show on
+}
+
+
+
+# Mixer control definitions to keep JACK and some other apps happy
+ctl.loop_capture {
+    type hw
+    card Loopback
+}
+
+ctl.loop_playback {
+    type hw
+    card Loopback
+}
+
+ctl.loop {
+    type hw
+    card Loopback
+}
+
+ctl.mixer0 {
+    type hw
+    card 0
+}
