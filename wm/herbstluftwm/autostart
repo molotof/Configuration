@@ -150,4 +150,3 @@ feh --bg-fill ~/.background
 xrefresh
 killall -w hlwm-dzen2
 launch hlwm-dzen2
-pidof qjackctl >/dev/null || launch qjackctl
