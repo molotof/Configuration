@@ -42,6 +42,7 @@ repo-Configuration () {
     ['audio/mpd']='.config/mpd/mpd.conf|(password +).*'
     ['audio/mpd/ncmpcpp']='.ncmpcpp/{config,keys}'
     ['file/ranger']='.config/ranger/{rc.conf,*.py}'
+    ['file/wvm-open']='.config/wvm-open/config'
     ['network/pentadactyl']='.pentadactylrc'
     ['network/rtorrent']='.rtorrent.rc'
     ['network/samba']='/etc/samba/smb.conf'
