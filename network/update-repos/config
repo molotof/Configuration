@@ -34,6 +34,7 @@ repo-Scripts () {
     ['video/tv']='bin/tv{,-scan}'
     ['wm']='bin/wm-session-manager'
     ['wm/herbstluftwm']='bin/hlwm-*'
+    ['x11']='bin/colemak'
     )
 }
 repo-Configuration () {

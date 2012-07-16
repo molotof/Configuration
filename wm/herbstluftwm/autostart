@@ -150,3 +150,4 @@ feh --bg-fill ~/.background
 xrefresh
 killall -w hlwm-dzen2
 launch hlwm-dzen2
+pkill -0 jackd || jack-start
